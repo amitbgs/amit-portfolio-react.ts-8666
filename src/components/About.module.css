@@ -1,0 +1,19 @@
+section { padding: 110px 0; background: var(--bg1); }
+.grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: start; }
+.textCol p.bioPara { font-size: 15.5px; color: var(--t2); line-height: 1.8; margin-bottom: 18px; }
+.textCol p.bioPara b { color: var(--t1); font-weight: 500; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.infoCol { display: flex; flex-direction: column; gap: 16px; }
+.infoCard { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; }
+.infoRow {
+  display: flex; align-items: center; gap: 16px;
+  padding: 15px 20px; border-bottom: 1px solid var(--border);
+  transition: background .2s ease;
+}
+.infoRow:last-child { border-bottom: none; }
+.infoRow:hover { background: var(--rx-dim); }
+.infoIcon { font-size: 17px; width: 28px; text-align: center; flex-shrink: 0; }
+.infoLbl { display: block; font-family: var(--f-code); font-size: 10px; color: var(--t3); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 2px; }
+.infoVal { display: block; font-size: 13.5px; color: var(--t1); font-weight: 500; }
+.btns { display: flex; gap: 10px; flex-wrap: wrap; }
+@media (max-width:900px) { .grid { grid-template-columns: 1fr; gap: 36px; } }

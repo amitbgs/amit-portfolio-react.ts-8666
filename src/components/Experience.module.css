@@ -1,0 +1,33 @@
+section { padding: 110px 0; background: var(--bg); }
+.layout { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: start; }
+.colHead { font-family: var(--f-code); font-size: 11px; color: var(--rx); letter-spacing: .18em; text-transform: uppercase; margin-bottom: 20px; }
+.colHead::before { content: '// '; opacity: .4; }
+.timeline { position: relative; padding-left: 26px; }
+.timeline::before { content: ''; position: absolute; left: 7px; top: 24px; bottom: 0; width: 1px; background: linear-gradient(to bottom,var(--rx),transparent); }
+.tlDot { position: absolute; left: 0; top: 22px; width: 15px; height: 15px; background: var(--bg); border: 2.5px solid var(--rx); border-radius: 50%; box-shadow: 0 0 14px var(--rx-glow); z-index: 1; }
+.tlCard { padding: 26px; }
+.jobTop { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+.jobTitle { font-family: var(--f-head); font-size: 17px; font-weight: 700; color: var(--t1); margin-bottom: 4px; }
+.jobSub { font-family: var(--f-code); font-size: 12px; color: var(--rx); }
+.jobBadge { font-family: var(--f-code); font-size: 11px; background: var(--rx-dim); color: var(--rx); border: 1px solid rgba(97,218,251,.2); padding: 5px 12px; border-radius: var(--r-pill); white-space: nowrap; }
+.jobCo { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--t2); margin-bottom: 16px; }
+.coDot { width: 7px; height: 7px; background: var(--green); border-radius: 50%; animation: pulse-dot 2s infinite; flex-shrink: 0; }
+@keyframes pulse-dot { 0%,100%{box-shadow:0 0 0 0 rgba(52,211,153,.6)}50%{box-shadow:0 0 0 8px rgba(52,211,153,0)} }
+.jobBuls { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+.jobBuls li { font-size: 13.5px; color: var(--t2); line-height: 1.62; padding-left: 16px; position: relative; }
+.jobBuls li::before { content: '→'; position: absolute; left: 0; color: var(--rx); font-size: 11px; top: 2px; }
+.jobChips { display: flex; flex-wrap: wrap; gap: 8px; }
+.rightCol {}
+.eduList { display: flex; flex-direction: column; gap: 10px; }
+.eduCard { padding: 17px 20px; transition: border-color .25s ease, transform .25s ease; }
+.eduCard:hover { border-color: var(--border-hi); transform: translateX(4px); }
+.eduTop { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; flex-wrap: wrap; margin-bottom: 5px; }
+.eduDeg { font-family: var(--f-head); font-size: 14px; font-weight: 600; color: var(--t1); }
+.eduYr  { font-family: var(--f-code); font-size: 11px; color: var(--rx); white-space: nowrap; }
+.eduInst { font-size: 13px; color: var(--t2); }
+.eduBoard { font-size: 11.5px; color: var(--t3); font-family: var(--f-code); margin-top: 2px; }
+.achCard { padding: 22px; display: flex; flex-direction: column; gap: 13px; }
+.achRow { display: flex; align-items: flex-start; gap: 12px; }
+.achIcon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.achText { font-size: 13.5px; color: var(--t2); line-height: 1.58; }
+@media (max-width:900px) { .layout { grid-template-columns: 1fr; gap: 32px; } .timeline { padding-left: 0; } .timeline::before,.tlDot { display: none; } }
