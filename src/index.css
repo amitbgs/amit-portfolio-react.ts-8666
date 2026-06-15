@@ -120,3 +120,8 @@ a { color: var(--rx); text-decoration: none; }
   *,*::before,*::after{ animation-duration:.01ms!important; transition-duration:.01ms!important; }
 }
 @media (max-width:768px) { .wrap{padding:0 20px;} }
+
+@media (max-width:420px) {
+  .wrap { padding: 0 12px; }
+  body { font-size: 15px; }
+}

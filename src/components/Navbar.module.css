@@ -73,6 +73,13 @@
 .drawerCta { margin-top: auto; text-align: center; justify-content: center; border-radius: var(--r-sm); }
 
 @media (max-width: 768px) {
-  .desktopNav, .hireBtn { display: none; }
+  .desktopNav { display: none; }
+  .inner .hireBtn { display: none; }
   .burger { display: flex; }
+}
+
+@media (max-width:420px) {
+  .inner { gap: 12px; }
+  .logo { font-size: 18px; }
+  .burger { margin-left: auto; }
 }
